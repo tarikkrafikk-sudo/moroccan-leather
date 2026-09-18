@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Moroccan Leather — L'authenticité du cuir de Fès depuis 1990</title>
+<meta name="description" content="Sacs et ceintures en cuir 100% authentique, tannés et cousus main à Fès par des artisans marocains. Livraison 15 DH à Fès, 45 DH partout au Maroc, paiement à la livraison.">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS (utilitaires de mise en page) — le "preflight" est désactivé pour ne pas
+     entrer en conflit avec les styles personnalisés de style.css, qui gère les animations -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  // Garde défensive : si le CDN est bloqué (réseau restreint, bloqueur de script...),
+  // le reste du site reste fonctionnel puisque toute la mise en page réelle vit dans style.css
+  if (typeof tailwind !== 'undefined') {
+    tailwind.config = { corePlugins: { preflight: false } };
+  }
+</script>
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css?v=20260911t">
+</head>
+<body>
+
+  <!-- ============ BARRE LIVRAISON ============ -->
+  <div class="top-bar" data-i18n-html="topbar.html">
+    🚚 <strong>Livraison 15 DH à Fès</strong> / 45 DH partout au Maroc — Paiement à la livraison disponible
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader">
+
+    <div class="header-inner">
+      <div class="header-spacer" aria-hidden="true"></div>
+
+      <nav class="main-nav" id="mainNav">
+        <ul>
+          <li><a href="#home" data-route="home" class="nav-link" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="#shop" data-route="shop" class="nav-link" data-i18n="nav.shop">Boutique</a></li>
+          <li><a href="#shop:sacs" data-route="shop" data-id="sacs" class="nav-link" data-i18n="nav.bags">Sacs</a></li>
+          <li><a href="#shop:ceintures" data-route="shop" data-id="ceintures" class="nav-link" data-i18n="nav.belts">Ceintures</a></li>
+          <li><a href="#shop:portefeuilles" data-route="shop" data-id="portefeuilles" class="nav-link" data-i18n="nav.wallets">Portefeuilles</a></li>
+          <li><a href="#shop:vestes" data-route="shop" data-id="vestes" class="nav-link" data-i18n="nav.jackets">Vestes</a></li>
+          <li><a href="#shop:poufs" data-route="shop" data-id="poufs" class="nav-link" data-i18n="nav.poufs">Poufs</a></li>
+          <li><a href="#shop:babouches" data-route="shop" data-id="babouches" class="nav-link" data-i18n="nav.babouches">Babouches</a></li>
+          <li><a href="#about" data-route="about" class="nav-link" data-i18n="nav.about">À propos</a></li>
+          <li><a href="admin.html" class="nav-link">ADMIN</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" id="searchBtn" title="Rechercher" data-i18n-title="header.search_title">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+        </button>
+        <select id="language-switcher" class="lang-select" title="Language / Langue / اللغة" data-i18n-title="header.lang_title">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+        </select>
+        <a href="#cart" data-route="cart" class="icon-btn" title="Panier" data-i18n-title="header.cart_title">
+          🛍️<span class="cart-count">0</span>
+        </a>
+        <button class="burger" id="burgerBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ RECHERCHE (overlay) ============ -->
+  <div class="search-overlay" id="searchOverlay">
+    <div class="search-panel">
+      <div class="search-input-row">
+        <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
+        <input type="text" id="searchInput" data-i18n-placeholder="header.search_placeholder" placeholder="Rechercher un produit...">
+        <span class="search-close" id="searchCloseBtn">&times;</span>
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ================================================================
+         PAGE : HOME
+         ================================================================ -->
+    <section id="home" class="page-section active">
+
+      <!-- Hero / Bannière principale — tanneries de Fès -->
+      <div class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+
+          <!-- Nouveau logo "ML" : le "M" est un sac à main en cuir, le "L" une ceinture en cuir,
+               les deux séparés (jamais accolés), sans cadre, sur fond transparent.
+               FadeInUp à l'entrée ; au survol, le sac oscille légèrement et la boucle de la ceinture brille. -->
+          <div class="hero-logo-hover flex justify-center mb-10">
+            <div class="hero-logo-wrap">
+              <svg class="brand-logo hero-logo" viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Moroccan Leather">
+                <!-- "M" = sac à main en cuir : les deux anses forment les pointes du M -->
+                <g class="logo-bag" transform="translate(119,6)">
+                  <path d="M 8 82 L 82 82 L 68 35 L 22 35 Z" fill="#8B4513" stroke="#3E2723" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M 16 76 L 74 76 L 62 40 L 28 40 Z" fill="none" stroke="#F5F5DC" stroke-width="1" stroke-dasharray="2.5 3" opacity="0.85"/>
+                  <path d="M 22 35 Q 33 3 45 35" fill="none" stroke="#8B4513" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M 45 35 Q 57 3 68 35" fill="none" stroke="#8B4513" stroke-width="7" stroke-linecap="round"/>
+                  <path d="M 22 35 Q 33 3 45 35" fill="none" stroke="#F5F5DC" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.8"/>
+                  <path d="M 45 35 Q 57 3 68 35" fill="none" stroke="#F5F5DC" stroke-width="1.2" stroke-dasharray="2 3" opacity="0.8"/>
+                  <rect x="38" y="29" width="14" height="9" rx="2" fill="none" stroke="#D4AF37" stroke-width="2"/>
+                </g>
+                <!-- "L" = ceinture en cuir : barre verticale = sangle, barre horizontale = bout + boucle -->
+                <g class="logo-belt" transform="translate(206,6)">
+                  <path d="M 15 5 L 15 80 L 55 80" fill="none" stroke="#3E2723" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M 15 10 L 15 76 L 51 76" fill="none" stroke="#F5F5DC" stroke-width="1" stroke-dasharray="2.2 3" opacity="0.85"/>
+                  <g class="belt-buckle">
+                    <rect x="50" y="71" width="16" height="18" rx="3" fill="none" stroke="#D4AF37" stroke-width="2.5"/>
+                    <line x1="55" y1="80" x2="61" y2="80" stroke="#D4AF37" stroke-width="2.5" stroke-linecap="round"/>
+                  </g>
+                </g>
+                <text x="200" y="128" text-anchor="middle" font-family="'Playfair Display', serif" font-weight="700" font-size="24" letter-spacing="3" fill="#F5F5DC">MOROCCAN LEATHER</text>
+              </svg>
+            </div>
+          </div>
+
+          <span class="hero-eyebrow" data-i18n="hero.eyebrow">Fait main à Fès depuis 1990</span>
+          <h1 data-i18n-html="hero.title_html">L'art du cuir <em>marocain</em>, entre vos mains</h1>
+          <p data-i18n="hero.text">Sacs et ceintures 100% authentiques, tannés à la main dans les tanneries historiques de Fès.</p>
+          <div class="hero-buttons">
+            <a href="#shop" data-route="shop" class="btn btn-gold" data-i18n="hero.btn_shop">Découvrir la boutique</a>
+            <a href="#about" data-route="about" class="btn btn-outline-light" data-i18n="hero.btn_about">Notre histoire</a>
+          </div>
+        </div>
+        <div class="scroll-cue"><span class="line"></span><span data-i18n="hero.scroll">Scroll</span></div>
+      </div>
+
+      <!-- Best-sellers (vidéo) : tout produit ayant une "video" dans products.json -->
+      <section class="section best-sellers-section" style="background:var(--brown);">
+        <div class="container">
+          <div class="center">
+            <span class="section-tag" data-i18n="bestsellers.tag">Sélection</span>
+            <h2 class="section-title uppercase-title" data-i18n="bestsellers.title">Nos Best-sellers</h2>
+            <p class="section-subtitle center" data-i18n="bestsellers.subtitle">Les pièces préférées de nos clients, taillées dans un cuir d'exception.</p>
+          </div>
+          <div class="products-grid product-grid-video" id="bestSellersContainer"></div>
+          <div class="center" style="margin-top:50px;">
+            <a href="#shop" data-route="shop" class="btn btn-outline" data-i18n="bestsellers.viewall">Voir toute la boutique</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pourquoi Fès ? -->
+      <section class="section why-fes">
+        <div class="container">
+          <div class="why-grid">
+            <div class="why-image fade-in">
+              <img src="https://images.unsplash.com/photo-1767636924116-25561d65fa01?q=80&w=900&auto=format&fit=crop" alt="Artisan travaillant le cuir à Fès">
+              <div class="why-badge">
+                <span class="num">35+</span>
+                <span class="lbl" data-i18n="why.badge_label">Ans d'expertise</span>
+              </div>
+            </div>
+            <div class="why-text fade-in">
+              <span class="section-tag" data-i18n="why.tag">Notre savoir-faire</span>
+              <h2 class="section-title" data-i18n="why.title">Pourquoi le cuir de Fès ?</h2>
+              <p class="section-subtitle" data-i18n="why.subtitle">Fès abrite les plus anciennes tanneries du monde encore en activité. C'est ici, dans ce berceau du travail du cuir, que naissent nos créations, pièce après pièce.</p>
+              <div class="why-list">
+                <div class="why-item">
+                  <div class="why-icon">🌿</div>
+                  <div>
+                    <h4 data-i18n="why.item1_title">Tannage végétal traditionnel</h4>
+                    <p data-i18n="why.item1_text">Un cuir pleine fleur tanné selon des méthodes ancestrales, sans procédés chimiques agressifs.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <div class="why-icon">✋</div>
+                  <div>
+                    <h4 data-i18n="why.item2_title">100% fait main</h4>
+                    <p data-i18n="why.item2_text">Chaque sac et chaque ceinture est cousu à la main par des artisans qualifiés de la médina de Fès.</p>
+                  </div>
+                </div>
+                <div class="why-item">
+                  <div class="why-icon">🤝</div>
+                  <div>
+                    <h4 data-i18n="why.item3_title">Commerce équitable</h4>
+                    <p data-i18n="why.item3_text">Nous travaillons directement avec les maalems (maîtres artisans) pour une rémunération juste.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Catégories -->
+      <section class="section categories-section">
+        <div class="container">
+          <div class="center">
+            <span class="section-tag" data-i18n="categories.tag">Nos collections</span>
+            <h2 class="section-title" data-i18n="categories.title">Explorez par catégorie</h2>
+            <p class="section-subtitle center" data-i18n="categories.subtitle">Des pièces intemporelles, pensées pour durer toute une vie.</p>
+          </div>
+          <div class="categories-grid">
+            <div class="category-card fade-in" data-category="sacs">
+              <img src="images/produits/sac-1.jpg" alt="Sacs en cuir">
+              <div class="category-card-content">
+                <h3 data-i18n="categories.bags_title">Sacs en cuir</h3>
+                <span data-i18n="categories.discover">Découvrir →</span>
+              </div>
+            </div>
+            <div class="category-card fade-in" data-category="ceintures">
+              <img src="https://images.unsplash.com/photo-1711443982852-b3df5c563448?q=80&w=800&auto=format&fit=crop" alt="Ceintures en cuir">
+              <div class="category-card-content">
+                <h3 data-i18n="categories.belts_title">Ceintures</h3>
+                <span data-i18n="categories.discover">Découvrir →</span>
+              </div>
+            </div>
+            <div class="category-card fade-in" data-category="portefeuilles">
+              <img src="https://images.unsplash.com/photo-1678449544865-c03dc897112d?q=80&w=800&auto=format&fit=crop" alt="Portefeuilles en cuir">
+              <div class="category-card-content">
+                <h3 data-i18n="categories.wallets_title">Portefeuilles</h3>
+                <span data-i18n="categories.discover">Découvrir →</span>
+              </div>
+            </div>
+            <div class="category-card fade-in" data-category="">
+              <img src="images/produits/sac-a-dos-vintage-arriere.jpg" alt="Nouveautés">
+              <div class="category-card-content">
+                <h3 data-i18n="categories.new_title">Nouveautés</h3>
+                <span data-i18n="categories.discover">Découvrir →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Témoignages -->
+      <section class="section testimonials">
+        <div class="container">
+          <div class="center">
+            <span class="section-tag" data-i18n="testimonials.tag">Avis clients</span>
+            <h2 class="section-title" data-i18n="testimonials.title">Ils nous font confiance</h2>
+            <p class="section-subtitle center" data-i18n="testimonials.subtitle">Des centaines de clients satisfaits partout au Maroc et à l'international.</p>
+          </div>
+          <div class="testimonials-grid">
+            <div class="testimonial-card fade-in">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text" data-i18n="testimonial1.text">"La qualité du cuir est exceptionnelle. Mon sac Fès Tradition est encore plus beau en vrai que sur les photos. Un vrai coup de cœur !"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">S</div>
+                <div>
+                  <div class="testimonial-name">Sanae B.</div>
+                  <div class="testimonial-city" data-i18n="testimonial1.city">Casablanca</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card fade-in">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text" data-i18n="testimonial2.text">"Ma ceinture tressée est devenue mon accessoire préféré. On sent tout de suite le travail artisanal et le cuir de qualité."</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">Y</div>
+                <div>
+                  <div class="testimonial-name">Youssef K.</div>
+                  <div class="testimonial-city" data-i18n="testimonial2.city">Rabat</div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card fade-in">
+              <div class="stars">★★★★★</div>
+              <p class="testimonial-text" data-i18n="testimonial3.text">"Livraison rapide et paiement à la livraison très pratique. Le sac de voyage est solide et magnifique. Je recommande vivement !"</p>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">L</div>
+                <div>
+                  <div class="testimonial-name">Laila M.</div>
+                  <div class="testimonial-city" data-i18n="testimonial3.city">Marrakech</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+
+    <!-- ================================================================
+         PAGE : BOUTIQUE
+         ================================================================ -->
+    <section id="shop" class="page-section section-with-bg">
+      <div class="shop-header">
+        <div class="container">
+          <span class="section-tag" data-i18n="shop.tag">Boutique</span>
+          <h1 class="section-title" data-i18n="shop.title">Tous nos produits</h1>
+          <p class="section-subtitle center" data-i18n="shop.subtitle">Sacs et ceintures en cuir véritable, fabriqués à la main à Fès.</p>
+        </div>
+      </div>
+
+      <div class="section-sm">
+        <div class="container">
+          <div class="shop-layout">
+
+            <!-- Filtres -->
+            <aside class="filters">
+              <div class="filter-block">
+                <div class="filter-title" data-i18n="filters.category">Catégorie</div>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="sacs" checked> <span data-i18n="filters.bags">Sacs</span></label>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="ceintures" checked> <span data-i18n="filters.belts">Ceintures</span></label>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="portefeuilles" checked> <span data-i18n="filters.wallets">Portefeuilles</span></label>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="vestes" checked> <span data-i18n="filters.jackets">Vestes</span></label>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="poufs" checked> <span data-i18n="filters.poufs">Poufs</span></label>
+                <label class="filter-option"><input type="checkbox" class="filter-category" value="babouches" checked> <span data-i18n="filters.babouches">Babouches</span></label>
+              </div>
+              <div class="filter-block">
+                <div class="filter-title" data-i18n="filters.price">Prix (DH)</div>
+                <div class="price-inputs">
+                  <input type="number" id="priceMin" value="0" min="0" placeholder="Min">
+                  <span>—</span>
+                  <input type="number" id="priceMax" value="7000" min="0" placeholder="Max">
+                </div>
+                <input type="range" id="priceMaxRange" min="0" max="7000" value="7000" oninput="document.getElementById('priceMax').value=this.value; document.getElementById('priceMax').dispatchEvent(new Event('input'));">
+              </div>
+              <div class="filter-block">
+                <span class="filter-reset" id="filterResetBtn" data-i18n="filters.reset">↺ Réinitialiser les filtres</span>
+              </div>
+            </aside>
+
+            <!-- Grille produits -->
+            <div class="shop-main">
+              <div class="shop-toolbar">
+                <span id="resultCount">12 produits</span>
+                <select id="sortSelect">
+                  <option value="default" data-i18n="shop.sort_default">Tri par défaut</option>
+                  <option value="price-asc" data-i18n="shop.sort_price_asc">Prix croissant</option>
+                  <option value="price-desc" data-i18n="shop.sort_price_desc">Prix décroissant</option>
+                  <option value="name-asc" data-i18n="shop.sort_name_asc">Nom (A–Z)</option>
+                </select>
+              </div>
+              <div class="shop-products-grid" id="shopGrid"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PAGE : PRODUIT
+         ================================================================ -->
+    <section id="product" class="page-section">
+      <div class="container product-page">
+        <div class="breadcrumb">
+          <a href="#home" data-route="home" data-i18n="breadcrumb.home">Accueil</a> / <a href="#shop" data-route="shop" data-i18n="breadcrumb.shop">Boutique</a> / <span id="breadcrumbCurrent" data-i18n="breadcrumb.default">Produit</span>
+        </div>
+        <div class="product-detail" id="productDetail"><!-- généré par script.js --></div>
+
+        <h3 class="related-title section-title" data-i18n="related.title">Vous aimerez aussi</h3>
+        <div class="products-grid" id="relatedGrid"></div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PAGE : À PROPOS
+         ================================================================ -->
+    <section id="about" class="page-section">
+      <div class="about-hero">
+        <div class="about-hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="about-hero-content flex flex-col items-center justify-center text-center px-6">
+          <span class="hero-eyebrow" data-i18n="about.eyebrow">Depuis 1990</span>
+          <h1 class="text-3xl sm:text-4xl md:text-5xl" data-i18n="about.title">Notre Histoire</h1>
+        </div>
+      </div>
+
+      <div class="about-story">
+        <div class="container">
+
+          <div class="story-row">
+            <div class="story-img fade-in">
+              <img src="images/about/decoupe-cuir.jpg" alt="Découpe précise du cuir à la main">
+            </div>
+            <div class="story-text fade-in">
+              <span class="section-tag" data-i18n="about.tag1">Une tradition familiale</span>
+              <h2 data-i18n="about.h2_1">Des mains expertes, un héritage préservé</h2>
+              <p data-i18n="about.p1_1">Moroccan Leather est né en 1990 dans les ruelles de la médina de Fès, berceau millénaire du tannage. Notre fondateur, formé auprès des maalems (maîtres artisans) des tanneries Chouara, a fait le pari de faire connaître le vrai cuir marocain au-delà des frontières.</p>
+              <p data-i18n="about.p1_2">Depuis, chaque génération d'artisans a transmis son savoir-faire à la suivante, perpétuant des gestes précis et minutieux, appris et affinés depuis des siècles.</p>
+            </div>
+          </div>
+
+          <div class="story-row reverse">
+            <div class="story-img fade-in">
+              <img src="images/about/atelier-artisan.jpg" alt="Artisan façonnant le cuir dans l'atelier">
+            </div>
+            <div class="story-text fade-in">
+              <span class="section-tag" data-i18n="about.tag2">Fait main, sans compromis</span>
+              <h2 data-i18n="about.h2_2">Chaque pièce raconte une histoire</h2>
+              <p data-i18n="about.p2_1">Nos artisans sélectionnent uniquement du cuir pleine fleur, tanné à base d'extraits végétaux dans les bassins traditionnels de Fès. La découpe, la couture et la finition sont réalisées entièrement à la main, sans chaîne de production industrielle.</p>
+              <p data-i18n="about.p2_2">Le résultat : des sacs et des ceintures uniques, résistants, qui se patinent avec le temps et gagnent en caractère à chaque usage.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Notre Atelier à Fès -->
+      <section class="section atelier-section">
+        <div class="container">
+          <div class="center">
+            <span class="section-tag" data-i18n="atelier.tag">Immersion</span>
+            <h2 class="section-title" data-i18n="atelier.title">Notre Atelier à Fès</h2>
+            <p class="section-subtitle center" data-i18n="atelier.subtitle">Plongez au cœur de notre atelier de la médina, où chaque geste perpétue un savoir-faire vieux de plusieurs siècles.</p>
+          </div>
+          <div class="atelier-grid">
+            <div class="atelier-item fade-in">
+              <video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1767636924116-25561d65fa01?q=80&w=800&auto=format&fit=crop">
+                <source src="https://videos.pexels.com/video-files/34740373/14727125_2560_1440_30fps.mp4" type="video/mp4">
+              </video>
+              <div class="atelier-caption" data-i18n="atelier.caption1">Le tannage traditionnel</div>
+            </div>
+            <div class="atelier-item fade-in d1">
+              <video autoplay muted loop playsinline preload="auto" poster="https://images.unsplash.com/photo-1787005241178-c9006ea9610b?q=80&w=800&auto=format&fit=crop">
+                <source src="https://videos.pexels.com/video-files/4456103/4456103-hd_1920_1080_25fps.mp4" type="video/mp4">
+              </video>
+              <div class="atelier-caption" data-i18n="atelier.caption3">La couture à la main</div>
+            </div>
+            <div class="atelier-item fade-in d2">
+              <video autoplay muted loop playsinline preload="auto">
+                <source src="videos/atelier-savoir-faire.mp4" type="video/mp4">
+              </video>
+              <div class="atelier-caption" data-i18n="atelier.caption_generic">Le savoir-faire artisanal</div>
+            </div>
+            <div class="atelier-item fade-in">
+              <video autoplay muted loop playsinline preload="auto">
+                <source src="https://videos.pexels.com/video-files/34740224/14727186_2560_1440_30fps.mp4" type="video/mp4">
+              </video>
+              <div class="atelier-caption" data-i18n="atelier.caption_generic">Le savoir-faire artisanal</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="values-strip">
+        <div class="container">
+          <div class="values-grid">
+            <div class="value-item fade-in">
+              <div class="value-icon">🍃</div>
+              <h4 data-i18n="values.item1_title">Cuir pleine fleur</h4>
+              <p data-i18n="values.item1_text">Sélectionné à la main pour sa qualité et sa durabilité.</p>
+            </div>
+            <div class="value-item fade-in">
+              <div class="value-icon">✋</div>
+              <h4 data-i18n="values.item2_title">100% fait main</h4>
+              <p data-i18n="values.item2_text">Aucune production industrielle, chaque pièce est unique.</p>
+            </div>
+            <div class="value-item fade-in">
+              <div class="value-icon">🤝</div>
+              <h4 data-i18n="values.item3_title">Commerce équitable</h4>
+              <p data-i18n="values.item3_text">Une rémunération juste pour nos artisans partenaires.</p>
+            </div>
+            <div class="value-item fade-in">
+              <div class="value-icon">💯</div>
+              <h4 data-i18n="values.item4_title">Satisfaction garantie</h4>
+              <p data-i18n="values.item4_text">Échange possible sous 7 jours, service client réactif.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         PAGE : PANIER
+         ================================================================ -->
+    <section id="cart" class="page-section">
+      <div class="container cart-page">
+        <div class="center" style="margin-bottom:40px;">
+          <span class="section-tag" data-i18n="cart.tag">Panier</span>
+          <h1 class="section-title" data-i18n="cart.title">Votre panier</h1>
+        </div>
+        <div id="cartContainer"><!-- généré par script.js --></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section class="newsletter">
+    <div class="container">
+      <h2 data-i18n="newsletter.title">Restez informé(e)</h2>
+      <p data-i18n="newsletter.subtitle">Inscrivez-vous pour recevoir nos nouveautés et offres exclusives.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" id="newsletterEmail" name="email" placeholder="Votre adresse e-mail" data-i18n-placeholder="newsletter.placeholder" required>
+        <button type="submit" class="btn btn-gold" data-i18n="newsletter.submit">S'inscrire</button>
+      </form>
+      <p class="newsletter-msg" id="newsletterMsg"></p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col">
+          <div class="footer-logo">Moroccan<span>Leather</span></div>
+          <p data-i18n="footer.about_text">L'authenticité du cuir de Fès depuis 1990. Sacs et ceintures en cuir 100% authentique, fait main par des artisans marocains.</p>
+          <div class="social-icons">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">◎</a>
+            <a href="#" title="TikTok">♪</a>
+            <a href="https://wa.me/212648092229" target="_blank" title="WhatsApp">☎</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.nav_title">Navigation</h4>
+          <ul>
+            <li><a href="#home" data-route="home" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="#shop" data-route="shop" data-i18n="nav.shop">Boutique</a></li>
+            <li><a href="#shop:sacs" data-route="shop" data-id="sacs" data-i18n="nav.bags">Sacs</a></li>
+            <li><a href="#shop:ceintures" data-route="shop" data-id="ceintures" data-i18n="nav.belts">Ceintures</a></li>
+            <li><a href="#shop:portefeuilles" data-route="shop" data-id="portefeuilles" data-i18n="nav.wallets">Portefeuilles</a></li>
+            <li><a href="#shop:vestes" data-route="shop" data-id="vestes" data-i18n="nav.jackets">Vestes</a></li>
+            <li><a href="#shop:poufs" data-route="shop" data-id="poufs" data-i18n="nav.poufs">Poufs</a></li>
+            <li><a href="#shop:babouches" data-route="shop" data-id="babouches" data-i18n="nav.babouches">Babouches</a></li>
+            <li><a href="#about" data-route="about" data-i18n="nav.about">À propos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.help_title">Aide</h4>
+          <ul>
+            <li><a href="#" data-i18n="footer.help_faq">FAQ</a></li>
+            <li><a href="#" data-i18n="footer.help_delivery">Livraison &amp; délais</a></li>
+            <li><a href="#" data-i18n="footer.help_returns">Retours &amp; échanges</a></li>
+            <li><a href="#" data-i18n="footer.help_cod">Paiement à la livraison</a></li>
+            <li><a href="#" data-i18n="footer.help_tracking">Suivi de commande</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.contact_title">Contact</h4>
+          <ul class="footer-contact">
+            <li data-i18n="footer.contact_address">📍 Quartier Ain Nokbi, Fès, Maroc</li>
+            <li data-i18n="footer.contact_phone">📞 +212 6XX XXX XXX</li>
+            <li data-i18n="footer.contact_email">✉️ contact@moroccanleather.ma</li>
+            <li data-i18n="footer.contact_hours">🕐 Lun–Sam : 9h–19h</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span data-i18n="footer.copyright">© 2026 Moroccan Leather. Tous droits réservés.</span>
+        <div class="footer-payments">💵 💳 📦</div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:#999;padding:6px 0 2px;" id="buildVersionTag"></div>
+    </div>
+  </footer>
+
+  <!-- ============ BOUTON "ACHETER MAINTENANT" (checkout) ============ -->
+  <!-- Deuxième option de commande, à côté du bouton WhatsApp : mène vers checkout.html
+       (paiement à la livraison ou commande WhatsApp depuis un formulaire dédié). -->
+  <a href="checkout.html" class="buy-now-float" id="buyNowFloat" title="Commander maintenant">
+    🛒 Acheter maintenant
+  </a>
+
+  <!-- ============ BOUTON WHATSAPP FLOTTANT ============ -->
+  <!-- href mis à jour dynamiquement par script.js (numéro + texte selon la langue active) -->
+  <a href="https://wa.me/212648092229" target="_blank" class="whatsapp-float" id="waFloat" title="Discuter sur WhatsApp">
+    💬
+  </a>
+
+  <!-- ============ TOAST NOTIFICATION ============ -->
+  <div class="toast" id="toast"></div>
+
+  <!-- Scripts -->
+  <script src="i18n.js?v=20260911t"></script>
+  <script src="script.js?v=20260911t"></script>
+</body>
+</html>

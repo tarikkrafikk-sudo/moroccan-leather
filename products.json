@@ -1,0 +1,544 @@
+[
+  {
+    "id": 1,
+    "name": "Sac à main Fès Tradition",
+    "name_ar": "حقيبة يد فاس التقليدية",
+    "category": "sacs",
+    "price": 450,
+    "badge": "Best-seller",
+    "badge_ar": "الأكثر مبيعًا",
+    "colors": [
+      "Marron",
+      "Camel",
+      "Noir"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/sac-3.jpeg",
+      "images/produits/sac-3-interieur.jpeg",
+      "images/produits/sac-3-cote.jpeg"
+    ],
+    "description": "Ce sac à main allie élégance intemporelle et savoir-faire ancestral. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains dans les tanneries historiques de la médina. Chaque pièce est unique et porte la signature de son créateur.",
+    "description_ar": "تجمع هذه الحقيبة بين الأناقة الخالدة والحرفية العريقة. جلد أصلي 100% مدبوغ في فاس، مصنوع يدويًا من طرف حرفيين مغاربة في الدباغات التاريخية بالمدينة العتيقة. كل قطعة فريدة وتحمل بصمة صانعها.",
+    "featured": true,
+    "name_en": "Fès Tradition Handbag",
+    "badge_en": "Best-seller",
+    "description_en": "This handbag combines timeless elegance with age-old craftsmanship. 100% authentic leather tanned in Fez, handmade by Moroccan artisans in the medina's historic tanneries. Each piece is unique and carries its maker's signature."
+  },
+  {
+    "id": 3,
+    "name": "Tote Bag Artisanal Fès",
+    "name_ar": "حقيبة توت حرفية من فاس",
+    "category": "sacs",
+    "price": 450,
+    "badge": "Nouveauté",
+    "badge_ar": "جديد",
+    "colors": [
+      "Naturel",
+      "Marron"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/sac-2.jpg",
+      "images/produits/sac-2-interieur.jpg",
+      "images/produits/sac-2-cote.jpg"
+    ],
+    "description": "Spacieux et robuste, ce tote bag accompagne toutes vos journées. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains, il se bonifie avec le temps et l'usage.",
+    "description_ar": "واسعة ومتينة، هذه الحقيبة ترافقك في كل أيامك. جلد أصلي 100% مدبوغ في فاس، مصنوع يدويًا من طرف حرفيين مغاربة، يتحسن مظهرها مع الزمن والاستعمال.",
+    "featured": false,
+    "name_en": "Fès Artisan Tote Bag",
+    "badge_en": "New",
+    "description_en": "Spacious and sturdy, this tote bag goes with you through every day. 100% authentic leather tanned in Fez, handmade by Moroccan artisans, it only gets better with time and use."
+  },
+  {
+    "id": 4,
+    "name": "Sac à dos Cuir Marron",
+    "name_ar": "حقيبة ظهر من الجلد البني",
+    "category": "sacs",
+    "price": 550,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Marron",
+      "Noir"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/sac-a-dos4.jpeg",
+      "images/produits/sac-a-dos4-interieur.jpeg"
+    ],
+    "description": "Idéal pour la ville comme pour le voyage, ce sac à dos combine confort et caractère. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains.",
+    "description_ar": "مثالية للمدينة والسفر على حد سواء، تجمع هذه الحقيبة بين الراحة والشخصية. جلد أصلي 100% مدبوغ في فاس، مصنوع يدويًا من طرف حرفيين مغاربة.",
+    "featured": false,
+    "name_en": "Brown Leather Backpack",
+    "badge_en": "",
+    "description_en": "Ideal for the city as much as for travel, this backpack combines comfort and character. 100% authentic leather tanned in Fez, handmade by Moroccan artisans."
+  },
+  {
+    "id": 6,
+    "name": "Valise en Cuir",
+    "name_ar": "حقيبة سفر جلدية",
+    "category": "sacs",
+    "price": 1899,
+    "badge": "Nouveauté",
+    "badge_ar": "جديد",
+    "colors": [
+      "Marron",
+      "Noir"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/valise1.jpeg"
+    ],
+    "description": "Un sac de voyage grand format taillé pour l'aventure. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains, avec une capacité généreuse et une finition soignée.",
+    "description_ar": "حقيبة سفر بحجم كبير، صُممت للمغامرة. جلد أصلي 100% مدبوغ في فاس، مصنوع يدويًا من طرف حرفيين مغاربة، بسعة كبيرة وتشطيب متقن.",
+    "featured": true,
+    "name_en": "Leather Suitcase",
+    "badge_en": "New",
+    "description_en": "A large-format travel bag built for adventure. 100% authentic leather tanned in Fez, handmade by Moroccan artisans, with generous capacity and careful finishing."
+  },
+  {
+    "id": 13,
+    "name": "Sac en Cuir Artisanal",
+    "name_ar": "حقيبة جلدية حرفية",
+    "category": "sacs",
+    "price": 450,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Marron Saddle",
+      "Marron Foncé",
+      "Noir"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/sac-1.jpg",
+      "images/produits/sac-1-interieur.jpg",
+      "images/produits/sac-1-cote.jpg"
+    ],
+    "description": "Un tote bag au style crossbody, à la fois spacieux et élégant. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains — le compagnon idéal pour la ville comme pour le bureau.",
+    "description_ar": "حقيبة توتس بأسلوب كروسبودي، واسعة وأنيقة في آن واحد. جلد أصلي 100% مدبوغ في فاس، مصنوعة يدويًا من طرف حرفيين مغاربة — الرفيقة المثالية للمدينة والعمل.",
+    "featured": true,
+    "name_en": "Handcrafted Leather Bag",
+    "badge_en": "",
+    "description_en": "A crossbody-style tote, both spacious and elegant. 100% authentic leather tanned in Fez, handmade by Moroccan artisans — the ideal companion for the city or the office."
+  },
+  {
+    "id": 15,
+    "name": "Sac à Dos Vintage",
+    "name_ar": "حقيبة ظهر جلدية عتيقة",
+    "category": "sacs",
+    "price": 4500,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Marron Saddle"
+    ],
+    "sizes": [
+      "Taille unique"
+    ],
+    "images": [
+      "images/produits/sac-a-dos-vintage-arriere.jpg",
+      "images/produits/sac-a-dos1-interieur.jpeg",
+      "images/produits/sac-a-dos1-cote.jpeg"
+    ],
+    "description": "Un sac à dos au charme vintage, taillé dans un cuir riche en caractère. Cuir 100% authentique tanné à Fès, fait main par des artisans marocains, il se patine magnifiquement avec le temps.",
+    "description_ar": "حقيبة ظهر بسحر عتيق، مصنوعة من جلد غني بالطابع. جلد أصلي 100% مدبوغ في فاس، مصنوعة يدويًا من طرف حرفيين مغاربة، تكتسب جمالًا خاصًا مع مرور الوقت.",
+    "featured": true,
+    "name_en": "Vintage Backpack",
+    "badge_en": "",
+    "description_en": "A backpack with vintage charm, cut from leather rich in character. 100% authentic leather tanned in Fez, handmade by Moroccan artisans, it develops a beautiful patina over time."
+  },
+  {
+    "id": 19,
+    "name": "Veste en Cuir",
+    "name_ar": "سترة جلدية",
+    "category": "vestes",
+    "price": 1350,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Cognac"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "images/produits/veste-cognac-cuir-01.jpg",
+      "images/produits/veste-cognac-cuir-03.jpg",
+      "images/produits/veste-cognac-cuir-02-interieur.jpg"
+    ],
+    "description": "Veste moto en cuir véritable cognac, col montant zippé, poche poitrine et poches obliques zippées, pattes boutonnées à la taille et aux poignets. Doublure intérieure soignée avec écusson au col. Cuir 100% authentique tanné à Fès, taillé et cousu main par des artisans marocains.",
+    "description_ar": "سترة موتو من الجلد الطبيعي بلون الكونياك، ياقة عالية بسحاب، جيب صدر وجيوب مائلة بسحابات، وشرائط مزررة عند الخصر والأكمام. بطانة داخلية معتنى بها مع شعار على الياقة. جلد أصلي 100% مدبوغ في فاس، مفصّل ومخيط يدويًا من طرف حرفيين مغاربة.",
+    "featured": false,
+    "name_en": "Leather Jacket",
+    "badge_en": "New",
+    "description_en": "Moto jacket in genuine cognac leather, zippered stand-up collar, chest pocket and zippered slash pockets, buttoned tabs at the waist and cuffs. Carefully finished lining with a collar patch. 100% authentic leather tanned in Fez, cut and hand-stitched by Moroccan artisans."
+  },
+  {
+    "id": 22,
+    "name": "Babouche Classique Jaune",
+    "name_ar": "بلغة صفراء كلاسيكية",
+    "category": "babouches",
+    "price": 170,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Jaune"
+    ],
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-homme-jaune-01.jpg",
+      "images/produits/babouches/babouche-homme-jaune-02.jpg",
+      "images/produits/babouches/babouche-homme-jaune-03.jpg",
+      "images/produits/babouches/babouche-homme-jaune-04.jpg"
+    ],
+    "description": "Babouche marocaine classique en cuir teint jaune vif, semelle façon espadrille pour un confort au quotidien. Empeigne ornée d'un liseré tricolore fait main, cousue à Fès selon la tradition.",
+    "description_ar": "بلغة مغربية كلاسيكية من جلد مصبوغ بلون أصفر زاهٍ، بنعل على طراز الإسبادريل لراحة يومية. واجهة مزينة بخط ثلاثي الألوان مصنوع يدويًا، مخيطة بفاس وفق التقاليد.",
+    "featured": false,
+    "name_en": "Classic Yellow Babouche",
+    "badge_en": "New",
+    "description_en": "Classic Moroccan babouche in vivid yellow dyed leather, with an espadrille-style sole for everyday comfort. Vamp trimmed with a hand-finished tricolor edging, stitched in Fez the traditional way.",
+    "gender": "Homme",
+    "babouche_type": "Babouche classique",
+    "material": "Cuir teint"
+  },
+  {
+    "id": 27,
+    "name": "Babouche Marron Cuir Naturel",
+    "name_ar": "بلغة بنية من جلد طبيعي",
+    "category": "babouches",
+    "price": 199,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Marron"
+    ],
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-homme-marron-floral-01.jpg",
+      "images/produits/babouches/babouche-homme-marron-floral-02.jpg",
+      "images/produits/babouches/babouche-homme-marron-floral-03.jpg"
+    ],
+    "description": "Babouche traditionnelle en cuir naturel brun, gaufrée à la main d'un motif à quadrillage et petites fleurs. Coupe mule intemporelle et semelle plate souple, cousue à Fès par nos artisans.",
+    "description_ar": "بلغة تقليدية من جلد بني طبيعي، منقوشة يدويًا بنقشة مربعات وزهور صغيرة. قصة كلاسيكية بدون كعب ونعل مسطح مرن، مخيطة بفاس من طرف حرفيينا.",
+    "featured": false,
+    "name_en": "Natural Leather Brown Babouche",
+    "badge_en": "New",
+    "description_en": "Traditional babouche in natural brown leather, hand-embossed with a grid and small floral pattern. Timeless backless mule cut with a soft flat sole, stitched in Fez by our artisans.",
+    "gender": "Homme",
+    "babouche_type": "Babouche classique",
+    "material": "Cuir naturel"
+  },
+  {
+    "id": 28,
+    "name": "Balgha Brodée Multicolore",
+    "name_ar": "بلغة مطرزة متعددة الألوان",
+    "category": "babouches",
+    "price": 149,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Multicolore"
+    ],
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-femme-multicolore-01.jpg",
+      "images/produits/babouches/babouche-femme-multicolore-02.jpg",
+      "images/produits/babouches/babouche-femme-multicolore-03.jpg",
+      "images/produits/babouches/babouche-femme-multicolore-04.jpg"
+    ],
+    "description": "Balgha marocaine en cuir noir, entièrement brodée main de motifs géométriques multicolores. Pièce artisanale unique, traditionnellement portée par les femmes lors des grandes occasions.",
+    "description_ar": "بلغة مغربية من جلد أسود، مطرزة بالكامل يدويًا بنقوش هندسية متعددة الألوان. قطعة حرفية فريدة، ترتديها النساء تقليديًا في المناسبات الكبرى.",
+    "featured": false,
+    "name_en": "Embroidered Multicolor Balgha",
+    "badge_en": "New",
+    "description_en": "Moroccan balgha in black leather, fully hand-embroidered with multicolor geometric patterns. A one-of-a-kind artisan piece, traditionally worn by women for special occasions.",
+    "gender": "Femme",
+    "babouche_type": "Balgha",
+    "material": "Cuir teint"
+  },
+  {
+    "id": 29,
+    "name": "Balgha Pompons Rouge",
+    "name_ar": "بلغة حمراء بشراريب ملونة",
+    "category": "babouches",
+    "price": 130,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Rouge"
+    ],
+    "sizes": [
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-femme-rouge-01.jpg",
+      "images/produits/babouches/babouche-femme-rouge-02.jpg",
+      "images/produits/babouches/babouche-femme-rouge-03.jpg"
+    ],
+    "description": "Balgha en cuir rouge ornée de pompons colorés et d'une broderie géométrique dense, typique du savoir-faire des artisanes de Fès. Un modèle festif, parfait pour sublimer une tenue traditionnelle.",
+    "description_ar": "بلغة من جلد أحمر مزينة بشراريب ملونة وتطريز هندسي كثيف، من صميم حرفية صانعات فاس. موديل احتفالي مثالي لإبراز جمال اللباس التقليدي.",
+    "featured": false,
+    "name_en": "Red Pompom Balgha",
+    "badge_en": "New",
+    "description_en": "Balgha in red leather adorned with colorful pompoms and dense geometric embroidery, characteristic of the craftswomen of Fez. A festive style, perfect for elevating a traditional outfit.",
+    "gender": "Femme",
+    "babouche_type": "Balgha",
+    "material": "Cuir teint"
+  },
+  {
+    "id": 30,
+    "name": "Babouche Pointue Rouge",
+    "name_ar": "بلغة حمراء مدببة",
+    "category": "babouches",
+    "price": 149,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Rouge"
+    ],
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-homme-rouge-01.jpg",
+      "images/produits/babouches/babouche-homme-rouge-02.jpg",
+      "images/produits/babouches/babouche-homme-rouge-03.jpg"
+    ],
+    "description": "Babouche en cuir rouge à bout pointu, gaufrée d'un motif arabesque discret. Silhouette élégante et raffinée, cousue main à Fès pour un confort sans compromis.",
+    "description_ar": "بلغة من جلد أحمر بمقدمة مدببة، منقوشة بنقشة أرابيسك بسيطة. شكل أنيق ومصقول، مخيطة يدويًا بفاس لراحة لا مثيل لها.",
+    "featured": false,
+    "name_en": "Pointed Red Babouche",
+    "badge_en": "New",
+    "description_en": "Red leather babouche with a pointed toe, embossed with a subtle arabesque pattern. An elegant, refined silhouette, hand-stitched in Fez for uncompromising comfort.",
+    "gender": "Homme",
+    "babouche_type": "pointue",
+    "material": "Cuir teint"
+  },
+  {
+    "id": 31,
+    "name": "Babouche Marron Rayonnante",
+    "name_ar": "بلغة بنية بخطوط شعاعية",
+    "category": "babouches",
+    "price": 199,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Marron"
+    ],
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "images": [
+      "images/produits/babouches/babouche-homme-marron-rayonnante-01.jpg",
+      "images/produits/babouches/babouche-homme-marron-rayonnante-02.jpg",
+      "images/produits/babouches/babouche-homme-marron-rayonnante-03.jpg"
+    ],
+    "description": "Babouche en cuir naturel brun, gaufrée à la main d'un motif de lignes rayonnantes partant de la pointe. Coupe mule épurée, semelle plate souple, cousue à Fès par nos artisans.",
+    "description_ar": "بلغة من جلد بني طبيعي، منقوشة يدويًا بخطوط شعاعية تنطلق من المقدمة. قصة أنيقة بدون كعب ونعل مسطح مرن، مخيطة بفاس من طرف حرفيينا.",
+    "featured": false,
+    "name_en": "Radiating Brown Babouche",
+    "badge_en": "New",
+    "description_en": "Babouche in natural brown leather, hand-embossed with a radiating line pattern fanning out from the toe. Clean backless mule cut, soft flat sole, stitched in Fez by our artisans.",
+    "gender": "Homme",
+    "babouche_type": "Babouche classique",
+    "material": "Cuir naturel"
+  },
+  {
+    "id": 32,
+    "name": "Ceinture Cuir Marron Double Surpiqûre",
+    "name_ar": "حزام جلدي بني بخياطة مزدوجة",
+    "category": "ceintures",
+    "price": 399,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Marron"
+    ],
+    "sizes": [
+      "85",
+      "90",
+      "95",
+      "100",
+      "105"
+    ],
+    "images": [
+      "images/produits/ceinture-marron-tressee-01.jpg",
+      "images/produits/ceinture-marron-tressee-02.jpg",
+      "images/produits/ceinture-marron-tressee-03.jpg"
+    ],
+    "description": "Ceinture en cuir véritable marron, marquée par une double surpiqûre apparente au fil clair sur toute la longueur. Boucle en métal brossé, passant riveté, cuir épais qui se patine avec le temps. Fabriquée à la main à Fès selon les méthodes traditionnelles.",
+    "description_ar": "حزام من الجلد الطبيعي البني، بخياطة مزدوجة ظاهرة بخيط فاتح على كامل الطول. إبزيم من معدن مصقول، حلقة ممسكة مثبتة بمسمار، جلد سميك يكتسب طابعًا مميزًا مع الوقت. مصنوع يدويًا بفاس وفق الطرق التقليدية.",
+    "featured": false,
+    "name_en": "Brown Double-Stitched Leather Belt",
+    "badge_en": "",
+    "description_en": "Genuine brown leather belt, marked by a visible double stitch in light thread running the full length. Brushed metal buckle, riveted keeper loop, thick leather that develops character over time. Handmade in Fez using traditional methods."
+  },
+  {
+    "id": 33,
+    "name": "Pouf Rond Beige Brodé en Cuir Marocain",
+    "name_ar": "بوف دائري بيج مطرز من الجلد المغربي",
+    "category": "poufs",
+    "price": 349,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Beige",
+      "Marron",
+      "Camel",
+      "Noir",
+      "Bordeaux"
+    ],
+    "sizes": [
+      "Petite",
+      "Grande"
+    ],
+    "images": [
+      "images/produits/pouf-beige-brode-01.jpg",
+      "images/produits/pouf-beige-brode-02.jpg",
+      "images/produits/pouf-beige-brode-03.jpg",
+      "images/produits/pouf-beige-brode-04-interieur.jpg"
+    ],
+    "description": "Pouf rond en cuir véritable beige, orné sur le dessus d'une rosace brodée main au fil argenté, entourée de panneaux piqués façon zellige. Fermeture éclair sur le dessous pour ajuster le rembourrage à la demande. Cousu à Fès selon les méthodes traditionnelles.",
+    "description_ar": "بوف دائري من الجلد الطبيعي البيج، مزين على السطح بوردة مطرزة يدويًا بخيط فضي، محاطة بألواح مخيطة على طراز الزليج. سحاب في الأسفل لضبط الحشو حسب الرغبة. مخيط بفاس وفق الطرق التقليدية.",
+    "featured": false,
+    "name_en": "Beige Round Embroidered Moroccan Leather Pouf",
+    "badge_en": "",
+    "description_en": "Round genuine leather pouf in beige, topped with a hand-embroidered silver-thread rosette surrounded by stitched zellige-style panels. Zipper underneath to adjust the stuffing as needed. Stitched in Fez using traditional methods.",
+    "size_prices": {
+      "Petite": 349,
+      "Grande": 479
+    }
+  },
+  {
+    "id": 34,
+    "name": "Pouf Rond Marron Rayonnant en Cuir Marocain",
+    "name_ar": "بوف دائري بني بنقشة شعاعية من الجلد المغربي",
+    "category": "poufs",
+    "price": 349,
+    "badge": "",
+    "badge_ar": "",
+    "colors": [
+      "Marron",
+      "Beige",
+      "Camel",
+      "Noir",
+      "Bordeaux"
+    ],
+    "sizes": [
+      "Petite",
+      "Grande"
+    ],
+    "images": [
+      "images/produits/pouf-marron-rayonnant-01.jpg",
+      "images/produits/pouf-marron-rayonnant-02.jpg"
+    ],
+    "description": "Pouf rond en cuir véritable brun cognac, avec une étoile brodée à fil clair rayonnant depuis le centre, encadrée de piqûres perlées façon zellige. Une pièce chaleureuse pour un salon marocain ou un coin lecture. Fabriqué main à Fès.",
+    "description_ar": "بوف دائري من الجلد الطبيعي بني كونياك، بنجمة مطرزة بخيط فاتح تنطلق أشعتها من المركز، محاطة بخياطة لؤلؤية على طراز الزليج. قطعة دافئة لصالون مغربي أو ركن للقراءة. مصنوع يدويًا بفاس.",
+    "featured": false,
+    "name_en": "Brown Radiating Round Moroccan Leather Pouf",
+    "badge_en": "",
+    "description_en": "Round genuine cognac-brown leather pouf, with a light-thread embroidered star radiating from the center, framed by beaded zellige-style stitching. A warm piece for a Moroccan lounge or reading corner. Handmade in Fez.",
+    "size_prices": {
+      "Petite": 349,
+      "Grande": 479
+    }
+  },
+  {
+    "id": 36,
+    "name": "Veste en Cuir Camel",
+    "name_ar": "سترة جلدية بيج",
+    "category": "vestes",
+    "price": 950,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Camel"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "images": [
+      "images/produits/veste-camel-cuir-01.jpg",
+      "images/produits/veste-camel-cuir-02.jpg",
+      "images/produits/veste-camel-cuir-03-dos.jpg"
+    ],
+    "description": "Veste biker en cuir véritable camel, col cranté zippé, empiècements matelassés aux épaules, lacets décoratifs et poches obliques zippées. Doublure intérieure cognac soignée. Cuir 100% authentique tanné à Fès, taillé et cousu main par des artisans marocains.",
+    "description_ar": "سترة بايكر من الجلد الطبيعي بلون البيج، ياقة بسحاب، أكتاف مبطنة بخياطة ماسية، أربطة زخرفية وجيوب مائلة بسحابات. بطانة داخلية بلون الكونياك معتنى بها. جلد أصلي 100% مدبوغ في فاس، مفصّل ومخيط يدويًا من طرف حرفيين مغاربة.",
+    "featured": false,
+    "name_en": "Camel Leather Jacket",
+    "badge_en": "New",
+    "description_en": "Biker jacket in genuine camel leather, zippered notch collar, quilted shoulder panels, decorative lacing and zippered slash pockets. Carefully finished cognac-tone lining. 100% authentic leather tanned in Fez, cut and hand-stitched by Moroccan artisans."
+  },
+  {
+    "id": 37,
+    "name": "Sac Cartable en Cuir Noir",
+    "name_ar": "حقيبة كارتابل جلدية سوداء",
+    "category": "sacs",
+    "price": 649,
+    "badge": "Nouveau",
+    "badge_ar": "جديد",
+    "colors": [
+      "Noir"
+    ],
+    "sizes": [],
+    "images": [
+      "images/produits/sac-cartable-noir-01.jpg",
+      "images/produits/sac-cartable-noir-02-ouvert.jpg",
+      "images/produits/sac-cartable-noir-03-interieur.jpg"
+    ],
+    "description": "Sac cartable en cuir véritable noir, poignée renforcée, rabat avant boutonné, poche frontale et sangle de serrage à boucle. Grand compartiment intérieur doublé, idéal pour documents et ordinateur portable. Cuir 100% authentique tanné à Fès, taillé et cousu main par des artisans marocains.",
+    "description_ar": "حقيبة كارتابل من الجلد الطبيعي الأسود، مقبض متين، غطاء أمامي بأزرار، جيب أمامي وحزام بإبزيم للتثبيت. حجرة داخلية واسعة ومبطنة، مثالية للمستندات والحاسوب المحمول. جلد أصلي 100% مدبوغ في فاس، مفصّل ومخيط يدويًا من طرف حرفيين مغاربة.",
+    "featured": false,
+    "name_en": "Black Leather Satchel Bag",
+    "badge_en": "New",
+    "description_en": "Satchel bag in genuine black leather, reinforced handle, buttoned front flap, front pocket and buckle cinch strap. Large lined interior compartment, ideal for documents and a laptop. 100% authentic leather tanned in Fez, cut and hand-stitched by Moroccan artisans."
+  }
+]

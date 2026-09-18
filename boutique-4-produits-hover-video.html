@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique — 4 produits avec effet hover image → vidéo</title>
+<style>
+  :root {
+    --brown: #8B4513; --brown-dark: #3E2723; --gold: #D4AF37;
+    --beige: #F5F5DC; --beige-soft: #FAF6EE; --white: #fff;
+    --black: #1A1A1A; --gray: #777; --border: #eee;
+    --radius: 12px; --shadow-hover: 0 18px 34px rgba(0,0,0,.12);
+    --transition: all .3s ease;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--beige-soft); color: var(--black);
+    font-family: 'Poppins', Arial, sans-serif; padding: 40px 20px;
+  }
+  h1 { text-align: center; font-size: 24px; margin-bottom: 6px; }
+  p.sub { text-align: center; color: var(--gray); margin-top: 0; margin-bottom: 36px; font-size: 14px; }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  @media (max-width: 900px) { .products-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 520px) { .products-grid { grid-template-columns: 1fr; } }
+
+  .product-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+  }
+  .product-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-6px); }
+
+  .product-thumb { position: relative; overflow: hidden; aspect-ratio: 1/1; background: var(--beige-soft); }
+  .product-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease, opacity 0.35s ease; }
+  .product-card:hover .product-thumb img { transform: scale(1.1); }
+
+  /* --- Effet hover : image -> vidéo (desktop), bouton "lire" (tactile) --- */
+  .product-thumb .product-video {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .product-thumb.video-active .product-video { opacity: 1; pointer-events: auto; }
+  .product-thumb.video-active .product-image { opacity: 0; }
+
+  .video-play-btn {
+    position: absolute; right: 14px; bottom: 14px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: rgba(26, 26, 26, 0.65);
+    color: var(--white);
+    border: none;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px;
+    cursor: pointer;
+    transition: var(--transition);
+    z-index: 3;
+  }
+  .product-thumb.video-active .video-play-btn { background: rgba(212, 175, 55, 0.9); }
+  /* Le bouton "lire" ne s'affiche que sur écrans tactiles : sur desktop, le survol suffit */
+  @media (hover: hover) {
+    .video-play-btn { display: none; }
+  }
+
+  .product-badge {
+    position: absolute; top: 14px; left: 14px;
+    background: var(--gold); color: var(--black);
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
+    padding: 6px 12px; border-radius: 30px; z-index: 2;
+  }
+
+  .product-info { padding: 22px; }
+  .product-cat { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; }
+  .product-name { font-size: 17px; margin: 0 0 8px; }
+  .product-price { font-size: 19px; font-weight: 700; color: var(--brown); margin-bottom: 14px; }
+  .btn {
+    display: block; width: 100%; text-align: center; padding: 10px 0;
+    border-radius: 30px; border: 1.5px solid var(--brown); color: var(--brown);
+    background: transparent; font-weight: 600; font-size: 14px; cursor: pointer;
+    transition: var(--transition);
+  }
+  .btn:hover { background: var(--brown); color: var(--white); }
+
+  .note {
+    max-width: 800px; margin: 40px auto 0; font-size: 13px; color: var(--gray);
+    background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px;
+    line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<h1>Boutique — Sacs en cuir</h1>
+<p class="sub">Survolez une image (desktop) ou touchez le bouton ▶ (mobile) pour lancer l'aperçu vidéo.</p>
+
+<div class="products-grid">
+
+  <!-- Produit 1 : Sac Tote en Cuir Artisanal -->
+  <div class="product-card">
+    <div class="product-thumb" data-has-video="1">
+      <a href="#product-13">
+        <img class="product-image" src="https://images.unsplash.com/photo-1567744875520-cf9c27fbb53b?q=80&w=1200&auto=format&fit=crop" alt="Sac Tote en Cuir Artisanal">
+      </a>
+      <video class="product-video" muted loop playsinline preload="none">
+        <source src="https://videos.pexels.com/video-files/6649980/6649980-uhd_2732_1440_25fps.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="video-play-btn" aria-label="Lire la vidéo">▶</button>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Sac en cuir</div>
+      <h3 class="product-name">Sac Tote en Cuir Artisanal</h3>
+      <div class="product-price">3 220 DH</div>
+      <button class="btn add-to-cart" data-id="13">Ajouter au panier</button>
+    </div>
+  </div>
+
+  <!-- Produit 2 : Sac de Voyage 50L en Cuir -->
+  <div class="product-card">
+    <div class="product-thumb" data-has-video="1">
+      <a href="#product-14">
+        <img class="product-image" src="https://images.unsplash.com/photo-1525103504173-8dc1582c7430?q=80&w=1200&auto=format&fit=crop" alt="Sac de Voyage 50L en Cuir">
+      </a>
+      <video class="product-video" muted loop playsinline preload="none">
+        <source src="https://videos.pexels.com/video-files/6648424/6648424-uhd_1440_2732_25fps.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="video-play-btn" aria-label="Lire la vidéo">▶</button>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Sac en cuir</div>
+      <h3 class="product-name">Sac de Voyage 50L en Cuir</h3>
+      <div class="product-price">6 158 DH</div>
+      <button class="btn add-to-cart" data-id="14">Ajouter au panier</button>
+    </div>
+  </div>
+
+  <!-- Produit 3 : Sac à Dos en Cuir Vintage -->
+  <div class="product-card">
+    <div class="product-thumb" data-has-video="1">
+      <a href="#product-15">
+        <img class="product-image" src="https://images.unsplash.com/photo-1622560257067-108402fcedc0?q=80&w=1200&auto=format&fit=crop" alt="Sac à Dos en Cuir Vintage">
+      </a>
+      <video class="product-video" muted loop playsinline preload="none">
+        <source src="https://videos.pexels.com/video-files/34740224/14727186_2560_1440_30fps.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="video-play-btn" aria-label="Lire la vidéo">▶</button>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Sac en cuir</div>
+      <h3 class="product-name">Sac à Dos en Cuir Vintage</h3>
+      <div class="product-price">4 500 DH</div>
+      <button class="btn add-to-cart" data-id="15">Ajouter au panier</button>
+    </div>
+  </div>
+
+  <!-- Produit 4 : Sac Duffel en Cuir Naturel -->
+  <div class="product-card">
+    <div class="product-thumb" data-has-video="1">
+      <a href="#product-16">
+        <img class="product-image" src="https://images.unsplash.com/photo-1448582649076-3981753123b5?q=80&w=1200&auto=format&fit=crop" alt="Sac Duffel en Cuir Naturel">
+      </a>
+      <video class="product-video" muted loop playsinline preload="none">
+        <source src="https://videos.pexels.com/video-files/34740038/14727224_2560_1440_30fps.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="video-play-btn" aria-label="Lire la vidéo">▶</button>
+    </div>
+    <div class="product-info">
+      <div class="product-cat">Sac en cuir</div>
+      <h3 class="product-name">Sac Duffel en Cuir Naturel</h3>
+      <div class="product-price">5 800 DH</div>
+      <button class="btn add-to-cart" data-id="16">Ajouter au panier</button>
+    </div>
+  </div>
+
+</div>
+
+<div class="note">
+  <strong>Sources des médias :</strong> images Unsplash, vidéos Pexels — toutes libres de droits, usage commercial autorisé sans attribution obligatoire (Unsplash License / Pexels License). Ces 4 produits sont déjà intégrés dans <code>products.json</code> du site principal (id 13 à 16) avec le même système de hover ; ce fichier autonome sert de démonstration/aperçu isolé.
+</div>
+
+<script>
+  // Effet hover image -> vidéo : lecture au survol (desktop),
+  // bouton "lire" au tap (mobile/tactile), tap sur la vidéo pour revenir à l'image.
+  document.querySelectorAll('.product-thumb[data-has-video]').forEach((thumb) => {
+    const video = thumb.querySelector('.product-video');
+    const playBtn = thumb.querySelector('.video-play-btn');
+    if (!video) return;
+
+    const playVideo = () => {
+      thumb.classList.add('video-active');
+      video.currentTime = 0;
+      video.play().catch(() => {
+        // Lecture bloquée (ex: réseau lent) -> on revient simplement à l'image.
+        thumb.classList.remove('video-active');
+      });
+    };
+    const stopVideo = () => {
+      thumb.classList.remove('video-active');
+      video.pause();
+    };
+
+    thumb.addEventListener('mouseenter', playVideo);
+    thumb.addEventListener('mouseleave', stopVideo);
+
+    if (playBtn) {
+      playBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        thumb.classList.contains('video-active') ? stopVideo() : playVideo();
+      });
+    }
+    video.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      stopVideo();
+    });
+  });
+</script>
+
+</body>
+</html>

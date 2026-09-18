@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finaliser ma commande — Moroccan Leather</title>
+<meta name="description" content="Finalisez votre commande Moroccan Leather : paiement à la livraison ou commande directe via WhatsApp.">
+<meta name="robots" content="noindex">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Styles (même feuille que le reste du site) -->
+<link rel="stylesheet" href="style.css?v=20260911t">
+</head>
+<body>
+
+  <!-- ============ EN-TÊTE SIMPLIFIÉ (pas de menu complet : on garde l'acheteur concentré sur la commande) ============ -->
+  <header class="checkout-header">
+    <div class="container">
+      <a href="index.html" class="checkout-brand">Moroccan<span>Leather</span></a>
+      <div class="checkout-header-actions">
+        <a href="index.html#shop" class="checkout-back-link">&larr; Retour à la boutique</a>
+        <a href="index.html#cart" class="icon-btn" title="Panier">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container cart-page">
+      <div class="center" style="margin-bottom:40px;">
+        <span class="section-tag">Commande</span>
+        <h1 class="section-title">Finaliser ma commande</h1>
+      </div>
+
+      <!-- Panier vide : on cache le formulaire et on invite à retourner à la boutique -->
+      <div id="checkoutEmpty" class="cart-empty" hidden>
+        <div class="icon">🛍️</div>
+        <h3>Votre panier est vide</h3>
+        <p>Ajoutez des articles à votre panier avant de passer commande.</p>
+        <a href="index.html#shop" class="btn btn-primary">Voir la boutique</a>
+      </div>
+
+      <form id="checkoutForm" class="cart-layout" novalidate>
+
+        <!-- Colonne principale : informations + paiement -->
+        <div class="cart-items">
+
+          <h3 style="margin-bottom:22px;">Vos informations</h3>
+          <div class="form-group">
+            <label for="ckEmail">Email *</label>
+            <input type="email" id="ckEmail" name="email" autocomplete="email" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ckFirstName">Prénom *</label>
+              <input type="text" id="ckFirstName" name="firstName" autocomplete="given-name" required>
+            </div>
+            <div class="form-group">
+              <label for="ckLastName">Nom *</label>
+              <input type="text" id="ckLastName" name="lastName" autocomplete="family-name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ckAddress">Adresse *</label>
+            <input type="text" id="ckAddress" name="address" autocomplete="street-address" required>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="ckCity">Ville *</label>
+              <input type="text" id="ckCity" name="city" autocomplete="address-level2" required>
+            </div>
+            <div class="form-group">
+              <label for="ckPhone">Téléphone *</label>
+              <input type="tel" id="ckPhone" name="phone" autocomplete="tel" required>
+            </div>
+          </div>
+
+          <h3 style="margin:34px 0 18px;">Mode de paiement</h3>
+          <div class="payment-options">
+            <label class="payment-option selected" data-method="cod">
+              <input type="radio" name="paymentMethod" value="cod" checked>
+              <div>
+                <div class="po-title">💵 Paiement à la livraison — COD</div>
+                <div class="po-desc">Vous payez en espèces directement au livreur, à la réception de votre commande.</div>
+              </div>
+            </label>
+            <label class="payment-option" data-method="whatsapp">
+              <input type="radio" name="paymentMethod" value="whatsapp">
+              <div>
+                <div class="po-title">💬 Commander via WhatsApp</div>
+                <div class="po-desc">Contactez-nous directement sur WhatsApp pour finaliser votre commande avec un conseiller.</div>
+              </div>
+            </label>
+          </div>
+
+          <p id="checkoutError" class="checkout-error" hidden></p>
+
+          <div class="checkout-actions">
+            <button type="submit" class="btn btn-primary btn-block" id="codSubmitBtn">Passer ma commande</button>
+            <button type="button" class="whatsapp-order-btn" id="waSubmitBtn" hidden>Commander sur WhatsApp</button>
+          </div>
+        </div>
+
+        <!-- Colonne latérale : récapitulatif du panier -->
+        <div class="cart-summary">
+          <h3>Récapitulatif du panier</h3>
+          <div id="checkoutItems"><!-- généré par checkout.js --></div>
+          <div class="summary-row"><span>Sous-total</span><span id="ckSubtotal">—</span></div>
+          <div class="summary-row"><span id="ckDeliveryLabel">Livraison</span><span id="ckDelivery">—</span></div>
+          <div class="summary-row total"><span>Total</span><span id="ckTotal">—</span></div>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- ============ BOUTON WHATSAPP FLOTTANT (identique au reste du site) ============ -->
+  <a href="https://wa.me/212648092229" target="_blank" class="whatsapp-float" id="waFloat" title="Discuter sur WhatsApp">
+    💬
+  </a>
+
+  <script src="checkout.js?v=20260911t"></script>
+</body>
+</html>

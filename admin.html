@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Administration — Moroccan Leather</title>
+<link rel="icon" href="assets/logo.jpg">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<div id="loginScreen" class="login-screen">
+  <form id="loginForm" class="login-card">
+    <img src="assets/logo.jpg" alt="Moroccan Leather" class="login-logo">
+    <h1>Administration</h1>
+    <p class="login-sub">Connecte-toi pour gérer les produits, les prix et les photos.</p>
+    <input type="password" id="loginPassword" placeholder="Mot de passe" autocomplete="current-password" required>
+    <button type="submit" class="btn btn-primary">Se connecter</button>
+    <p id="loginError" class="login-error"></p>
+  </form>
+</div>
+
+<div id="adminApp" class="admin-app hidden">
+  <header class="admin-header">
+    <div class="admin-header-left">
+      <img src="assets/logo.jpg" alt="" class="admin-logo">
+      <h1>Moroccan Leather — Administration</h1>
+    </div>
+    <div class="admin-header-right">
+      <a href="index.html" target="_blank" class="btn btn-outline btn-sm">Voir le site ↗</a>
+      <button id="logoutBtn" class="btn btn-outline btn-sm">Déconnexion</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <div class="admin-toolbar">
+      <input type="search" id="searchInput" placeholder="Rechercher un produit...">
+      <select id="categoryFilter">
+        <option value="">Toutes les catégories</option>
+        <option value="sacs">Sacs</option>
+        <option value="ceintures">Ceintures</option>
+        <option value="portefeuilles">Portefeuilles</option>
+        <option value="vestes">Vestes</option>
+        <option value="poufs">Poufs</option>
+        <option value="babouches">Babouches</option>
+      </select>
+      <button id="addProductBtn" class="btn btn-primary">+ Nouveau produit</button>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <div id="productGrid" class="product-admin-grid"></div>
+  </main>
+</div>
+
+<!-- Modèle (template) d'une carte produit -->
+<template id="productCardTemplate">
+  <div class="product-admin-card" data-id="">
+    <div class="pac-images"></div>
+    <div class="pac-body">
+      <div class="pac-row">
+        <input type="text" class="pac-name" placeholder="Nom du produit">
+        <button class="pac-delete" title="Supprimer ce produit">🗑</button>
+      </div>
+      <div class="pac-row">
+        <select class="pac-category">
+          <option value="sacs">Sacs</option>
+          <option value="ceintures">Ceintures</option>
+          <option value="portefeuilles">Portefeuilles</option>
+          <option value="vestes">Vestes</option>
+          <option value="poufs">Poufs</option>
+          <option value="babouches">Babouches</option>
+        </select>
+        <div class="pac-price-wrap">
+          <input type="number" class="pac-price" min="0" step="1">
+          <span>DH</span>
+        </div>
+      </div>
+      <input type="text" class="pac-badge" placeholder="Badge (ex: Best-seller) — facultatif">
+      <textarea class="pac-description" placeholder="Description" rows="2"></textarea>
+      <div class="pac-footer">
+        <span class="pac-id"></span>
+        <button class="btn btn-primary btn-sm pac-save">Enregistrer</button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script src="admin.js"></script>
+</body>
+</html>

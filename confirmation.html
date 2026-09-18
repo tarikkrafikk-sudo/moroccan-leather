@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commande confirmée — Moroccan Leather</title>
+<meta name="robots" content="noindex">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css?v=20260911t">
+</head>
+<body>
+
+  <header class="checkout-header">
+    <div class="container">
+      <a href="index.html" class="checkout-brand">Moroccan<span>Leather</span></a>
+      <div class="checkout-header-actions">
+        <a href="index.html#shop" class="checkout-back-link">&larr; Retour à la boutique</a>
+        <a href="index.html#cart" class="icon-btn" title="Panier">🛍️<span class="cart-count">0</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="container" style="padding:80px 0 110px; min-height:55vh;">
+
+      <!-- Affiché uniquement si une commande "Paiement à la livraison" vient d'être passée -->
+      <div id="confirmationContent" class="center" hidden>
+        <div style="font-size:56px; margin-bottom:18px;">✅</div>
+        <h1 class="section-title" id="confMessage">Merci ! Votre commande est confirmée</h1>
+        <p style="color:var(--gray); margin-top:10px;">Numéro de commande : <strong id="confOrderNumber">—</strong></p>
+
+        <div class="cart-summary" style="max-width:480px; margin:36px auto 0; text-align:left;">
+          <h3>Détails de la livraison</h3>
+          <div class="summary-row"><span>Client</span><span id="confName">—</span></div>
+          <div class="summary-row"><span>Adresse</span><span id="confAddress">—</span></div>
+          <div class="summary-row"><span>Téléphone</span><span id="confPhone">—</span></div>
+          <div class="summary-row"><span>Paiement</span><span>Paiement à la livraison (COD)</span></div>
+          <div class="summary-row"><span id="confDeliveryLabel">Livraison</span><span id="confDeliveryFee">—</span></div>
+          <div class="summary-row total"><span>Total</span><span id="confTotal">—</span></div>
+        </div>
+
+        <a href="index.html#shop" class="btn btn-primary" style="margin-top:36px;">Retour à la boutique</a>
+      </div>
+
+      <!-- Repli : accès direct à la page sans commande récente en localStorage -->
+      <div id="confirmationEmpty" class="cart-empty" hidden>
+        <div class="icon">🧾</div>
+        <h3>Aucune commande récente trouvée</h3>
+        <p>Il semble que vous n'ayez pas encore finalisé de commande.</p>
+        <a href="index.html#shop" class="btn btn-primary">Voir la boutique</a>
+      </div>
+    </div>
+  </main>
+
+  <a href="https://wa.me/212648092229" target="_blank" class="whatsapp-float" id="waFloat" title="Discuter sur WhatsApp">
+    💬
+  </a>
+
+  <script src="confirmation.js?v=20260911t"></script>
+</body>
+</html>

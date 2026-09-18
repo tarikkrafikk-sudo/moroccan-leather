@@ -1,0 +1,10 @@
+{
+  "name": "moroccan-leather",
+  "version": "1.1.0",
+  "description": "Moroccan Leather — site e-commerce (HTML/CSS/JS) pour sacs, ceintures, vestes, poufs et babouches en cuir de Fès, avec panneau d'administration intégré.",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}
