@@ -200,7 +200,15 @@ async function handleApi(req, res, pathname) {
     validTokens.add(token);
     return sendJson(res, 200, { token });
   }
-
+  // Route public vitrine + health pour cron
+  if (pathname === '/api/products' && req.method === 'GET') {
+    const products = await readProducts();
+    return sendJson(res, 200, products);
+  }
+  if (pathname === '/health' && (req.method === 'GET' || req.method === 'HEAD')) {
+    return sendJson(res, 200, { ok: true, time: new Date().toISOString() });
+  }
+  
   // --- Tout le reste nécessite un jeton valide ---
   if (!isAuthed(req)) {
     return sendJson(res, 401, { error: 'Non autorisé. Merci de vous reconnecter.' });
