@@ -337,13 +337,11 @@ async function handleApi(req, res, pathname) {
 }
 
 // ---------------------------------------------------------------------------
-// Serveur HTTP
-// ---------------------------------------------------------------------------
-const server = http.createServer(async (req, res) => {
+const requestHandler = async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`);
   const pathname = url.pathname;
 
-  if (pathname.startsWith('/api/')) {
+  if (pathname.startsWith('/api/') || pathname === '/health') {
     try {
       await handleApi(req, res, pathname);
     } catch (err) {
@@ -356,20 +354,19 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
-  // Permet d'accéder au panneau admin via /admin (sans ".html")
   if (pathname === '/admin' || pathname === '/admin/') {
     return serveStatic(req, res, '/admin.html');
   }
 
   serveStatic(req, res, pathname === '/' ? '/index.html' : pathname);
-});
+};
 
-// Pour Vercel : ne pas lancer listen, juste exporter le serveur
+const server = http.createServer(requestHandler);
+
 if (!process.env.VERCEL) {
   server.listen(PORT, () => {
     console.log(`Moroccan Leather — serveur démarré sur http://localhost:${PORT}`);
-    console.log(`Panneau admin : http://localhost:${PORT}/admin.html`);
   });
 }
 
-module.exports = server;
+module.exports = requestHandler;
