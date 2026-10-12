@@ -364,7 +364,12 @@ const server = http.createServer(async (req, res) => {
   serveStatic(req, res, pathname === '/' ? '/index.html' : pathname);
 });
 
-server.listen(PORT, () => {
-  console.log(`Moroccan Leather — serveur démarré sur http://localhost:${PORT}`);
-  console.log(`Panneau admin : http://localhost:${PORT}/admin.html`);
-});
+// Pour Vercel : ne pas lancer listen, juste exporter le serveur
+if (!process.env.VERCEL) {
+  server.listen(PORT, () => {
+    console.log(`Moroccan Leather — serveur démarré sur http://localhost:${PORT}`);
+    console.log(`Panneau admin : http://localhost:${PORT}/admin.html`);
+  });
+}
+
+module.exports = server;
