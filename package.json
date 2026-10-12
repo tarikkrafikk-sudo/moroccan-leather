@@ -2,7 +2,7 @@
   "name": "moroccan-leather",
   "version": "1.0.0",
   "type": "module",
-  "main": "api/products.js",
+  "main": "index.js",
   "dependencies": {
     "@vercel/blob": "^0.23.0"
   }
