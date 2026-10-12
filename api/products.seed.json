@@ -1,0 +1,24 @@
+[
+  {
+    "id": 36,
+    "name": "Veste en Cuir Camel",
+    "category": "vestes",
+    "price": 950,
+    "images": [
+      "images/produits/veste-camel-1.jpg",
+      "images/produits/veste-camel-2.jpg",
+      "images/produits/veste-camel-3.jpg"
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Sac Cartable en Cuir Noir",
+    "category": "sacs",
+    "price": 649,
+    "images": [
+      "images/produits/sac-cartable-noir-1.jpg",
+      "images/produits/sac-cartable-noir-2.jpg",
+      "images/produits/sac-cartable-noir-3.jpg"
+    ]
+  }
+]
